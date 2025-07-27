@@ -31,14 +31,5 @@ services:
       timeout: 5s
       retries: 5
 
-  db-ui:
-    image: adminer
-    restart: always
-    ports:
-      - "8080:8080"
-    depends_on:
-      db:
-        condition: service_healthy
-
 volumes:
   postgres_data:
