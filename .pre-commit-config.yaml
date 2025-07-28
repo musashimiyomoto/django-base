@@ -9,7 +9,7 @@ repos:
         args:
           [
             --scopes,
-            "api,constants,db,enums,exceptions,repositories,schemas,settings,usecases",
+            "models,views,urls,settings,admin,tests",
             --strict,
             feat,
             fix,
