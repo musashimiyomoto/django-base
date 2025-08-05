@@ -7,9 +7,9 @@ readme = "README.md"
 package-mode = false
 
 [tool.poetry.dependencies]
-python = "3.11.*"
+python = "3.12.*"
 django = "5.2"
-psycopg = { extras = ["c"], version = "3.2.4" }
+psycopg2-binary = "2.9.10"
 gunicorn = { extras = ["gevent"], version = "23.0.0" }
 
 [tool.poetry.group.dev]
@@ -65,11 +65,11 @@ select = [
     "FURB", # refurb
     "DJ",   # Django
 ]
-exclude = ["migrations"]
+exclude = ["migrations", "manage.py"]
 
 [tool.pyright]
 typeCheckingMode = "standard"
-pythonVersion = "3.11"
+pythonVersion = "3.12"
 
 [build-system]
 requires = ["poetry-core"]
